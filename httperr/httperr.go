@@ -15,9 +15,9 @@ type HttpError struct {
 
 func (mr *HttpError) String() string {
 	if mr == nil {
-		return "status_code:, message:"
+		return "message:"
 	}
-	s := fmt.Sprintf("status_code: %d, message: %s", mr.StatusCode, mr.Message)
+	s := fmt.Sprintf("message: %s", mr.Message)
 	if !util.EmptyString(mr.Details) {
 		s += ", details: " + mr.Details
 	}

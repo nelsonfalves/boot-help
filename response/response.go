@@ -58,16 +58,15 @@ func (mr *Response) responseAsText() error {
 	return err
 }
 
-func (mr *Response) SendJSON() {
+func (mr *Response) SendJSON() error {
 	if mr.writer == nil {
-		return
+		return nil
 	}
 	mr.writeContentTypeAndHeaders("application/json; charset=utf-8")
 	if mr.err != nil {
-		json.NewEncoder(mr.writer).Encode(mr.err)
-	} else {
-		json.NewEncoder(mr.writer).Encode(mr.contentData)
+		return json.NewEncoder(mr.writer).Encode(mr.err)
 	}
+	return json.NewEncoder(mr.writer).Encode(mr.contentData)
 }
 
 func (mr *Response) writeContentTypeAndHeaders(contentType string) {

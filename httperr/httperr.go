@@ -25,10 +25,11 @@ func (mr *HttpError) String() string {
 }
 
 // Add details to HttpError
-func (mr *HttpError) WithDetails(details string) {
+func (mr *HttpError) WithDetails(details string) *HttpError {
 	if mr != nil {
 		mr.Details = details
 	}
+	return mr
 }
 
 // Create a new HttpError with StatusCode 400 and a custom message

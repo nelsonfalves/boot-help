@@ -7,6 +7,9 @@
 Tornando a vida do bootcamper mais simples :) 
 
 ---
+<br>
+
+⚠️ Boot-Help está em construção, a maneira de utilizá-lo pode sofrer alterações.
 
 <br>
 

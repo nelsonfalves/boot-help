@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/gawbsouza/boot-help/httperr"
-	"github.com/gawbsouza/boot-help/util"
+	"github.com/nelsonfalves/boot-help/httperr"
+	"github.com/nelsonfalves/boot-help/util"
 )
 
 type Response struct {

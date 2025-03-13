@@ -1,6 +1,6 @@
 package response
 
-import "github.com/gawbsouza/boot-help/httperr"
+import "github.com/nelsonfalves/boot-help/httperr"
 
 func (r *Response) Err(err *httperr.HttpError) *Response {
 	if r != nil {

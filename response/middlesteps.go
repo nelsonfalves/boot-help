@@ -1,7 +1,7 @@
 package response
 
 import (
-	"github.com/gawbsouza/boot-help/util"
+	"github.com/nelsonfalves/boot-help/util"
 )
 
 func (mr *Response) Content(content any) *Response {

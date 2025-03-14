@@ -43,3 +43,10 @@ func (r *Response) InternalErr(message string) *Response {
 	}
 	return r
 }
+
+func (r *Response) UnauthorizedErr(message string) *Response {
+	if r != nil {
+		r.err = httperr.Unauthorized(message)
+	}
+	return r
+}

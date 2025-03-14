@@ -71,3 +71,10 @@ func Internal(message string) *HttpError {
 		Message:    message,
 	}
 }
+
+func Unauthorized(message string) *HttpError {
+	return &HttpError{
+		StatusCode: http.StatusUnauthorized,
+		Message:    message,
+	}
+}
